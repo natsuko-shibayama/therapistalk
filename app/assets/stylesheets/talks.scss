@@ -1,0 +1,123 @@
+/* 共通のスタイル */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+
+.logo-icon {
+  width: 20px;
+  height: 25px;
+}
+
+.lists-right {
+  list-style: none;
+  display: flex;
+}
+
+.lists-right li {
+  margin-left: 30px;
+}
+
+.lists-right li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.footer-contents {
+  height: 100px;
+  background-color: #4fbdd7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 160px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+
+.footer-left a.logo-icon {
+  width: 20px;
+  height: 25px;
+  margin-left: auto;
+}
+
+
+.footer-right{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  margin: 0;
+  float: right;
+}
+
+/* ヘッダー部分のスタイル */
+.top-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4fbdd7;
+  padding: 0 160px;
+}
+
+/* フッター部分のスタイル */
+.footer-contents {
+  height: 100px;
+  background-color: #4fbdd7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 160px;
+}
+
+
+// talks.index
+.talks-contents{
+  margin: 40px;
+  height: 100vh;
+}
+
+.main-title{
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.sub-title{
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.talks-lists{
+  background-color: beige;
+  width: 70vw;
+  padding: 10px;
+}
+
+.list{
+  list-style: none;
+}
+
+.talks-title{
+  margin-bottom: 24px;
+  color: black;
+}
+
+
+

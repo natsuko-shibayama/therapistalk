@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+<%# みんなの投稿一覧　タイトルのみ%>
+<div class='main'>
+  <div class='talks-contents'>
+    <h2 class='main-title'>投稿一覧</h2>
+    <div class='sub-title'>
+      新規相談
+    </div>
+    <ul class='talks-lists'>
+      <li class='list'>
+        <%= link_to "#" do%>
+        <div class='talks-info'>
+          <h3 class='talks-title'>
+            <%= "相談題名（相談者名）" %>
+          <h3>
+        </div>
+        <% end %>
+      </li>
+    </ul>
+    <%# 相談一覧 %>
+  </div>
+</div>
+<%= render "shared/footer" %>
+  

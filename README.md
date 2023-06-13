@@ -67,3 +67,47 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 # 工夫したポイント
 
 
+
+
+# テーブル設計
+
+## usersテーブル
+
+| Column                | Type   | Options                   |
+| ------------------    | ------ | ------------------------- |
+| email                 | string | null: false, unique: true |
+| encrypted_password    | string | null: false               |
+| nickname              | string | null: false               |
+| job                   | string | null: false               |
+| description           | string | null: false               |
+
+### Association
+
+- has_many :talks
+- has_many :comments
+
+## talks テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| title   | text       | null: false                    |
+| content | text       | null: false                    |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column | Type       | Options                         |
+| ------ | ---------- | ------------------------------- |
+| user   | references | null: false , foreign_key: true |
+| talk   | references | null: false , foreign_key: true |
+| text   | text       | null: false                     |
+
+### Association
+
+- belongs_to :user
+- belongs_to :talk
