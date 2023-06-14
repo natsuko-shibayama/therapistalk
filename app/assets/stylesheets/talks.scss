@@ -90,18 +90,27 @@
 
 
 // talks.index
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("topimage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .talks-contents{
   margin: 40px;
   height: 100vh;
+  text-align: center;
 }
 
 .main-title{
   font-size: 28px;
   margin-bottom: 40px;
-}
-.sub-title{
-  font-size: 24px;
-  margin-bottom: 40px;
+  color: black;
+  font-weight: bold;
 }
 
 .talks-lists{
