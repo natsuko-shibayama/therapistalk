@@ -1,4 +1,4 @@
-.signup-page{
+.signup-page {
   margin: 16px auto;
 }
 
@@ -8,12 +8,11 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-  height: 450px; 
-  width: 400px; 
+  height: 630px;
+  width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  
 }
 
 .signup-logo {
@@ -26,14 +25,14 @@
   color: #fff;
 }
 
-.signup-logo-icon{
+.signup-logo-icon {
   width: 20px;
   height: 25px;
 }
 
-.signup-logo-text{
+.signup-logo-text {
   text-decoration: none;
-  color:  white;
+  color: white;
   font-size: 28px;
   font-weight: bold;
   margin-left: 10px;
@@ -41,20 +40,33 @@
   text-align: center;
 }
 
-h2{
+h2 {
   text-align: center;
   color: #4fbdd7;
 }
 
-.login-field{
-  background-color: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(5px); 
+.login-field {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .field {
   text-align: center;
   margin-bottom: 10px;
+  color: #4fbdd7;
+  font-weight: bold;
+}
+
+.form-text-wrap{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-text-wrap label{
   color: #4fbdd7;
   font-weight: bold;
 }
@@ -65,9 +77,9 @@ h2{
 }
 
 .actions input[type="submit"] {
-  color: #ffffff; 
-  background-color: #4fbdd7; 
-  border: none; 
+  color: #ffffff;
+  background-color: #4fbdd7;
+  border: none;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
