@@ -1,7 +1,8 @@
 class TalksController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
 
   def index
+    @talks =Talk.all
   end
 
   def new
@@ -18,15 +19,31 @@ class TalksController < ApplicationController
   end
 
   def show
+    @talk = Talk.find(params[:id])
+    @user = User.find(@talk.user_id)
   end
 
   def edit
+    @talk = Talk.find(params[:id])
+    if current_user.id != @talk.user_id
+      redirect_to root_path
+    end
   end
 
   def update
+    @talk = Talk.find(params[:id])
+    if @talk.update(talk_params)
+      redirect_to talk_path(@talk.id)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    talk = Talk.find(params[:id])
+    @user = User.find(talk.user_id)
+    talk.destroy
+    redirect_to user_path(@user)
   end
 
 

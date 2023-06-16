@@ -64,18 +64,19 @@
   <%# 投稿一覧ページ %>
   <div class="talks-main">
     <div class="talks-wrapper">
-
       <h2>投稿一覧</h2>
       <ul class='talks-lists'>
-        <li class='list'>
-          <%= link_to "#" do%>
-          <div class='talks-info'>
-            <h3 class='talks-title'>
-              <%= "相談題名" %>
-            <h3>
-          </div>
-          <% end %>
-        </li>
+        <% @talks.each do |talk| %>
+          <li class='list'>
+            <%= link_to talk_path(talk) do%>
+            <div class='talks-info'>
+              <h3 class='talks-title'>
+                <%= talk.title %>
+              <h3>
+            </div>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
 
     </div>
