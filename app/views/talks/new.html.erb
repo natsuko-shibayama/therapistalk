@@ -7,6 +7,7 @@
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: @talk, url: talks_path, local: true do |f|%>
+        <%= render 'shared/error_messages', model: @talk %>
         <div class='field'>
           <div class='field-label'>
             <%= f.label :タイトル %>
