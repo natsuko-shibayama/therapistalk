@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'talks/index'
+  devise_for :users
   root to: "talks#index"
+  resources :users, only: [:show, :edit, :update]
 end

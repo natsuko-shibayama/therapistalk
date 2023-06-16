@@ -1,0 +1,65 @@
+<%= render "shared/header" %>
+
+  <%# マイページの中身 %>
+  <div class="mypage-main">
+
+    <%# ニックネーム、仕事、自己紹介を載せて一番下に編集ボタンつける %>
+    <%# ニックネーム %>
+    <div class='field'>
+      <div class='field-label'>
+        <%= label_tag :ニックネーム %>
+      </div>
+      <div class='field-input'>
+        <%= @user.nickname %>
+      </div>
+    </div>
+
+    <%# 職業 %>
+    <div class='field'>
+      <div class='field-label'>
+        <%= label_tag :職業 %>
+      </div>
+      <div class='field-input'>
+        <%= @user.job %>
+      </div>
+    </div>
+
+    <%# 自己紹介 %>
+    <div class='field'>
+      <div class='field-label'>
+        <%= label_tag :自己紹介 %>
+      </div>
+      <div class='field-input'>
+        <%= @user.description %>
+      </div>
+    </div>
+
+    <%# 条件分岐 %>
+    <% if current_user.id ==  @user.id %>
+      <div class='actions'>
+        <%= button_to "編集", edit_user_path(current_user), method: :get, class: 'user-edit' %>
+      </div>
+    <% end %>
+  </div>
+
+  <%# 投稿一覧ページ %>
+  <div class="talks-main">
+    <div class="talks-wrapper">
+
+      <h2>投稿一覧</h2>
+      <ul class='talks-lists'>
+        <li class='list'>
+          <%= link_to "#" do%>
+          <div class='talks-info'>
+            <h3 class='talks-title'>
+              <%= "相談題名" %>
+            <h3>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

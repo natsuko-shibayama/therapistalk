@@ -43,7 +43,7 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 * コメントをしたセラピストへのいいね、フォロー機能
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/8ecdfda71be53e1d215bdbe6b3f1621e.png)](https://gyazo.com/8ecdfda71be53e1d215bdbe6b3f1621e)
+[![Image from Gyazo](https://i.gyazo.com/cdc70417e9995cdc42de0a90602849de.png)](https://gyazo.com/cdc70417e9995cdc42de0a90602849de)
 
 
 # 画面遷移図
@@ -105,7 +105,7 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 | ------ | ---------- | ------------------------------- |
 | user   | references | null: false , foreign_key: true |
 | talk   | references | null: false , foreign_key: true |
-| text   | text       | null: false                     |
+| text   | comment    | null: false                     |
 
 ### Association
 
