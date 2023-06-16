@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+
+<%# 投稿詳細（タイトル、内容）とその下に編集ボタン、削除ボタンをつける %>
+  <%# タイトル %>
+    <div class='field'>
+      <div class='field-label'>
+        <%= label_tag :タイトル %>
+      </div>
+      <div class='field-input'>
+        <%= @user.title %>
+      </div>
+    </div>
+
+  <%# 相談内容 %>
+    <div class='field'>
+      <div class='field-label'>
+        <%= label_tag :自己紹介 %>
+      </div>
+      <div class='field-input'>
+        <%= @user.description %>
+      </div>
+    </div>

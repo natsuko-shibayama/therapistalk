@@ -5,9 +5,16 @@ class TalksController < ApplicationController
   end
 
   def new
+    @talk = Talk.new
   end
 
   def create
+    @talk = Talk.new(talk_params)
+    if @talk.save
+      redirect_to user_path(@talk.user_id)
+    else
+      render :new
+    end
   end
 
   def show
@@ -20,5 +27,12 @@ class TalksController < ApplicationController
   end
 
   def destroy
+  end
+
+
+  private
+
+  def talk_params
+    params.require(:talk).permit(:title, :content).merge(user_id: current_user.id)
   end
 end
