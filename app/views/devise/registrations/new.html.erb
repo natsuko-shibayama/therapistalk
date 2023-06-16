@@ -13,12 +13,12 @@
 
         <div class='form-text-wrap'>
           <%= f.label :ニックネーム %><br />
-          <%= f.text_field :nickname, class:"nickname", id:"nickname" %>
+          <%= f.text_field :nickname, autofocus: true, class:"nickname", id:"nickname" %>
         </div>
 
         <div class="field">
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, autocomplete: "email" %>
         </div>
 
         <div class="field">

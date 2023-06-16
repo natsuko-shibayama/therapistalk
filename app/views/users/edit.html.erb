@@ -1,18 +1,11 @@
-<div class='account-page' id='account-page'>
-  <header class='top-page-header'>
-  <div class='logo'>
-    <%= link_to image_tag("logo.png", class:"logo-icon"), "/" %>
-    <%= link_to "therapistalk", "/", class: "logo-text" %>
-  </div>
-  </header>
+<%= render "shared/header" %>
 
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
       <h2>編集</h2>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%= form_with model: current_user, local: true do |f|%>
-        <%= render "devise/shared/error_messages", resource: current_user %>
+      <%= form_with model: @user, url: "/users/#{@user.id}", local: true do |f|%>
         <div class='field'>
           <div class='field-label'>
             <%= f.label :ニックネーム %>
@@ -41,9 +34,8 @@
         </div>
 
         <div class='actions'>
-          <%= button_to "保存", user_path(current_user), method: :get, class: 'user-update' %>
+          <%= f.submit "保存", class: 'user-update' %>
         </div>
       <% end %>
     </div>
   </div>
-</div>

@@ -1,18 +1,4 @@
-<div class="mypage-wrapper">
-  
-  <%# マイページヘッダー %>
-  <header class='top-page-header'>
-    <div class='logo'>
-      <%= link_to image_tag("logo.png", class:"logo-icon"), "/" %>
-      <%= link_to "therapistalk", "/", class: "logo-text" %>
-    </div>
-
-    <%# マイページ右側　投稿ボタン %>
-    <div class='lists-right'>
-      <li><%= link_to '投稿', "#", class: "sign-up" %></li>
-    </div>
-  </header>
-
+<%= render "shared/header" %>
 
   <%# マイページの中身 %>
   <div class="mypage-main">
@@ -24,7 +10,7 @@
         <%= label_tag :ニックネーム %>
       </div>
       <div class='field-input'>
-        <%= current_user.nickname %>
+        <%= @user.nickname %>
       </div>
     </div>
 
@@ -34,7 +20,7 @@
         <%= label_tag :職業 %>
       </div>
       <div class='field-input'>
-        <%= current_user.job %>
+        <%= @user.job %>
       </div>
     </div>
 
@@ -44,15 +30,16 @@
         <%= label_tag :自己紹介 %>
       </div>
       <div class='field-input'>
-        <%= current_user.description %>
+        <%= @user.description %>
       </div>
     </div>
 
-
-    <div class='actions'>
-      <%= button_to "編集", edit_user_path(current_user), method: :get, class: 'user-edit' %>
-    </div>
-
+    <%# 条件分岐 %>
+    <% if current_user.id ==  @user.id %>
+      <div class='actions'>
+        <%= button_to "編集", edit_user_path(current_user), method: :get, class: 'user-edit' %>
+      </div>
+    <% end %>
   </div>
 
   <%# 投稿一覧ページ %>
@@ -75,3 +62,4 @@
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
