@@ -1,0 +1,64 @@
+<%= render "shared/header" %>
+
+<%# 投稿詳細（タイトル、内容）とその下に編集ボタン、削除ボタンをつける %>
+<%# タイトル %>
+  <div class='field'>
+    <div class='field-label'>
+      <%= label_tag :タイトル %>
+    </div>
+    <div class='field-input'>
+      <%= @talk.title %>
+    </div>
+  </div>
+
+<%# 相談内容 %>
+  <div class='field'>
+    <div class='field-label'>
+      <%= label_tag :投稿内容 %>
+    </div>
+    <div class='field-input'>
+      <%= @talk.content %>
+    </div>
+  </div>
+
+  <%# 編集ボタンと削除ボタンを投稿したユーザーだけに表示。左右に位置させる。%>
+  <% if @talk.user == current_user %>
+    <div class="talk-button">
+
+      <%# 編集ボタン %>
+      <div class="edit-button">
+        <%= link_to "編集", edit_talk_path(@talk), class: 'btn'%>
+      </div>
+
+      <%# 削除ボタン %>
+      <div class="delete-button">
+        <%= link_to "削除", talk_path(@talk), method: :delete, class: 'btn'%>
+      </div>
+    </div>
+  <% end %>
+
+  <%# ここからコメント欄 %>
+  <div class="talks-comment">
+
+    <%# コメントフォーム %>
+    <%#= form_for [@talk, Comment.new] do |f| %>
+    <%# <div class="field"> %>
+      <%#= f.label :content, "コメント" %>
+      <%#= f.text_area :content, rows: 4 %>
+    <%# </div> %>
+    <%#= f.submit "送信", class: "btn" %>
+    <%# end %>
+  <%# </div> %>
+
+  <%# コメント一覧 %>
+
+  <%# <div class="talks-comments"> %>
+    <h3>コメント一覧</h3>
+    <%# @comments.each do |comment| %>
+      <div class="comment">
+        <p>コメント内容<%#= comment.content %></p>
+      </div>
+    <%# end %>
+  </div>
+
+
