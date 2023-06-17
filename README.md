@@ -105,7 +105,7 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 | ------ | ---------- | ------------------------------- |
 | user   | references | null: false , foreign_key: true |
 | talk   | references | null: false , foreign_key: true |
-| text   | comment    | null: false                     |
+| comment | text    | null: false                     |
 
 ### Association
 

@@ -11,6 +11,16 @@
     </div>
   </div>
 
+<%# 名前 %>
+  <div class='field'>
+    <div class='field-label'>
+      <%= label_tag :相談者 %>
+    </div>
+    <div class='field-input'>
+      <%= @user.nickname %>
+    </div>
+  </div>
+
 <%# 相談内容 %>
   <div class='field'>
     <div class='field-label'>
@@ -38,27 +48,28 @@
   <% end %>
 
   <%# ここからコメント欄 %>
-  <div class="talks-comment">
-
-    <%# コメントフォーム %>
-    <%#= form_for [@talk, Comment.new] do |f| %>
-    <%# <div class="field"> %>
-      <%#= f.label :content, "コメント" %>
-      <%#= f.text_area :content, rows: 4 %>
-    <%# </div> %>
-    <%#= f.submit "送信", class: "btn" %>
-    <%# end %>
-  <%# </div> %>
-
-  <%# コメント一覧 %>
-
-  <%# <div class="talks-comments"> %>
-    <h3>コメント一覧</h3>
-    <%# @comments.each do |comment| %>
-      <div class="comment">
-        <p>コメント内容<%#= comment.content %></p>
-      </div>
-    <%# end %>
+  <div class="talks__comments">
+    <% if user_signed_in? %>
+      <%= form_with model: @comment, url: talk_comments_path(@talk.id) ,method: :post, local: true do |f|%>
+        <%= render 'shared/error_messages', model: @comment %>
+        <div class="field">
+          <%= f.label :コメント %><br />
+          <%= f.text_field :comment, id:"comment_text" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "送信", class: :form__btn  %>
+        </div>
+      <% end %> 
+    <% end %>
+    <ul class="comments_lists">
+    <h5>コメント一覧</h5>
+      <% @comments.each do |comment| %>
+        <li class="comments_list">
+          <%= comment.comment %>
+          <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
 
