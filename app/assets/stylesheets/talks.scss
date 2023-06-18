@@ -115,7 +115,7 @@
 
 .talks-lists{
   background-color: beige;
-  width: 70vw;
+  width: 50vw;
   padding: 10px;
 }
 
@@ -126,6 +126,73 @@
 .talks-title{
   margin-bottom: 24px;
   color: black;
+}
+
+
+
+
+// // talks.show
+
+
+.talks-show-wrapper{
+  height: 100vh;
+  margin-top: 20px;
+}
+
+/* 編集ボタンと削除ボタンをボタンにして横並びにする */
+.talk-button {
+  display: flex;
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 20px;
+  border: 1px solid #4fbdd7;
+  background-color: #4fbdd7;
+}
+
+.btn{
+  color: white;
+  text-decoration: none;
+}
+
+.comment-form{
+  margin-bottom: 30px;
+}
+/* コメント一覧全体を背景ベージュの四角で囲む */
+.comment-lists-wrapper {
+  background-color: beige;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 50vw; /* 必要に応じて幅を調整してください */
+}
+
+
+/* コメント一覧から下をページの真ん中に寄せる */
+.comment-wrapper {
+  text-align: center;
+}
+
+/* コメント一覧から下のユーザーの名前以外の文字の色を黒にし、リストスタイルをなくす */
+.comments_lists {
+  color: black;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+/* コメントのリストが縦に並ぶ際に上下の余白を設定する */
+.comments_list {
+  margin-bottom: 16px;
+}
+
+.field{
+  font-size: 26px;
 }
 
 

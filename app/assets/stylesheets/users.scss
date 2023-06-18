@@ -11,3 +11,46 @@
   height: 100vh;
   text-align: center;
 }
+
+// // users.show
+
+.mypage-main{
+  margin-top: 20px;
+}
+
+
+/* ニックネームから編集ボタンまでの間を40pxずつあける */
+.field + .field {
+  margin-top: 40px;
+}
+
+/* 背景のアクセントカラーは#4fbdd7 */
+body {
+  background-color: white;
+}
+
+/* ベースカラーはbeige */
+body {
+  color: beige;
+}
+
+/* field-labelのフォントを28px、field-inputのフォントを24pxでblackに */
+.field-label {
+  font-size: 28px;
+  color: #4fbdd7;
+}
+
+.field-input {
+  font-size: 24px;
+  color: black;
+}
+
+/* 編集ボタンの上を20pxあける */
+.actions {
+  margin-top: 20px;
+}
+
+
+.list{
+  text-decoration: none;
+}

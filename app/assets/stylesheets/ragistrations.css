@@ -8,11 +8,17 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-  height: 630px;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.signup-login-box .login-field {
+  flex-grow: 1; /* コンテンツ領域が余った場合に伸びるようにする */
 }
 
 .signup-logo {
@@ -82,4 +88,18 @@ h2 {
   border: none;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-button{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000; 
+}
+
+#login-button {
+  color: black;
+  font-size: 20px;
+  margin-top: 16px;
 }

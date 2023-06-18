@@ -1,19 +1,27 @@
 .login-page{
   margin: 16px auto;
+  height: auto;
 }
 
 .session-login-box {
   background-image: url("/assets/shake-hands.jpg");
   background-size: cover;
   background-position: center;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px; 
+  height: auto;
   width: 400px; 
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
-  
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.session-login-box .login-field {
+  flex-grow: 1; 
 }
 
 .session-logo {
@@ -70,5 +78,16 @@ h2{
   border: none; 
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#signup-button {
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#passwords-button {
+  color: black;
+  font-size: 20px;
 }
 
