@@ -54,3 +54,13 @@ body {
 .list{
   text-decoration: none;
 }
+
+#error_explanation{
+  color: #333333;
+  list-style: none;
+}
+
+.login-flash-message{
+  color: #333333;
+  font-size: 14px;
+}
