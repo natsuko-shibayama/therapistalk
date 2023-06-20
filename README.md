@@ -60,16 +60,6 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 * タスク管理
 * テスト
 
-# ローカルでの動作方法
-
-ここは書かなくてよい。
-
-
-
-# 工夫したポイント
-
-ここは大切！！
-
 
 # テーブル設計
 
@@ -103,11 +93,11 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 
 ## comments テーブル
 
-| Column | Type       | Options                         |
-| ------ | ---------- | ------------------------------- |
-| user   | references | null: false , foreign_key: true |
-| talk   | references | null: false , foreign_key: true |
-| comment | text    | null: false                     |
+| Column  | Type       | Options                         |
+| ------- | ---------- | ------------------------------- |
+| user    | references | null: false , foreign_key: true |
+| talk    | references | null: false , foreign_key: true |
+| comment | text       | null: false                     |
 
 ### Association
 
