@@ -1,48 +1,54 @@
-.talks-main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// users.show
+// .mypage-wrapper{
+//   height: 100vh;
+// }
+
+.mypage-left, .mypage-right {
+  display: inline-block;
+  vertical-align: top;
 }
-
-
-
-.talks-wrapper{
-  margin: 40px;
-  height: 100vh;
-  text-align: center;
-}
-
-// // users.show
 
 .mypage-main{
-  margin-top: 20px;
+  height: 400px;
+  display: flex;
+  margin-left: 250px;
+  margin-top: 60px;
 }
 
-
-/* ニックネームから編集ボタンまでの間を40pxずつあける */
-.field + .field {
-  margin-top: 40px;
+.mypage-left{
+  width: 700px;
+  height: 400px;
+  background-color: beige;
+  text-align: center;
+  padding-top: 60px;
 }
 
-/* 背景のアクセントカラーは#4fbdd7 */
-body {
-  background-color: white;
+.mypage-right{
+  width: 550px;
+  height: 450px;
 }
 
-/* ベースカラーはbeige */
-body {
-  color: beige;
+.mypage-field{
+  margin-bottom: 20px;
 }
 
 /* field-labelのフォントを28px、field-inputのフォントを24pxでblackに */
-.field-label {
-  font-size: 28px;
+.mypage-field-label {
+  font-size: 26px;
   color: #4fbdd7;
+  font-weight: bold;
 }
 
-.field-input {
-  font-size: 24px;
+.mypage-field-input {
+  font-size: 20px;
   color: black;
+}
+
+.mypage-image{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 15px auto;
 }
 
 /* 編集ボタンの上を20pxあける */
