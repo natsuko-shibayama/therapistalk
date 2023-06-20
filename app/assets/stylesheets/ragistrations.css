@@ -3,7 +3,7 @@
 }
 
 .signup-login-box {
-  background-image: url("/assets/shake-hands.jpg");
+  background-image: url("shake-hands.jpg");
   background-size: cover;
   background-position: center;
   justify-content: center;
