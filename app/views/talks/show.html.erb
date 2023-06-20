@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-
+<div class="talks-show-wrapper">
 <%# 投稿詳細（タイトル、内容）とその下に編集ボタン、削除ボタンをつける %>
 <%# タイトル %>
   <div class='field'>
@@ -36,40 +36,59 @@
     <div class="talk-button">
 
       <%# 編集ボタン %>
-      <div class="edit-button">
+      <button class="edit-button">
         <%= link_to "編集", edit_talk_path(@talk), class: 'btn'%>
-      </div>
+      </button>
 
       <%# 削除ボタン %>
-      <div class="delete-button">
+      <button class="delete-button">
         <%= link_to "削除", talk_path(@talk), method: :delete, class: 'btn'%>
-      </div>
+      </button>
     </div>
   <% end %>
 
   <%# ここからコメント欄 %>
-  <div class="talks__comments">
-    <% if user_signed_in? %>
-      <%= form_with model: @comment, url: talk_comments_path(@talk.id) ,method: :post, local: true do |f|%>
-        <%= render 'shared/error_messages', model: @comment %>
-        <div class="field">
-          <%= f.label :コメント %><br />
-          <%= f.text_field :comment, id:"comment_text" %>
-        </div>
-        <div class="actions">
-          <%= f.submit "送信", class: :form__btn  %>
-        </div>
-      <% end %> 
-    <% end %>
-    <ul class="comments_lists">
-    <div>コメント一覧</div>
-      <% @comments.each do |comment| %>
-        <li class="comments_list">
-          <%= comment.comment %>
-          <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+  <div class="comment-wrapper">
+    <div class="comment-left">
+      <div class="comment-form">
+        <% if user_signed_in? %>
+          <%= form_with model: @comment, url: talk_comments_path(@talk.id) ,method: :post, local: true do |f|%>
+            <%= render 'shared/error_messages', model: @comment %>
+            <div class="field">
+              <%= f.label :コメント %><br />
+              <%= f.text_area :comment, id:"comment_text" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信", class: :form__btn  %>
+            </div>
+          <% end %> 
+        <% end %>
+      </div>
+      <div class="comment-lists-wrapper">
+        <ul class="comments_lists">
+        <h3>コメント一覧</h3>
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.comment %>
+              <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
+              <span class="comment-created-at">
+                <%= l comment.created_at %>
+              </span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
+    <div class="comment-right">
+      <div class="caution">
+        ※お悩みに沿ったわかりやすいコメントをお願いします！<br>
+        みんなに優しい言葉づかいを心がけましょう。
+      </div>
+      <%= image_tag "stretch.jpg", class:"comment-image" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
 

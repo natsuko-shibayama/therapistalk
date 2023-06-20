@@ -1,35 +1,45 @@
 <%= render "shared/header" %>
 
 <%# 相談新規投稿画面 %>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>新規投稿</h2>
+  <div class='talks-new-wrapper'>
+    <h2 class="talks-new-title">新規投稿</h2>
+
+
+    <div class="talks-new-content">
+      <div class='talks-form-wrapper'>
+        <%= form_with model: @talk, url: talks_path, local: true do |f|%>
+          <%= render 'shared/error_messages', model: @talk %>
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :タイトル %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_field :title, autofocus: true %>
+            </div>
+          </div>
+
+          <div class='field'>
+            <div class='field-label'>
+              <%= f.label :相談内容 %>
+            </div>
+            <div class='field-input'>
+              <%= f.text_area :content %>
+            </div>
+          </div>
+
+          <div class='actions'>
+            <%= f.submit "投稿", class: 'user-create' %>
+          </div>
+
+        <% end %>
+      </div>
+
+      <div class="talks-new-caution">
+        <div class="caution-text">どんなお悩みでも大丈夫です。<br>体の部位や運動の方向など書くとわかりやすいですよ！</div>
+        <%= image_tag "topimage.jpg", class:"caution-image" %>
+      </div>
     </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: @talk, url: talks_path, local: true do |f|%>
-        <%= render 'shared/error_messages', model: @talk %>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :タイトル %>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :title, autofocus: true %>
-          </div>
-        </div>
 
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :相談内容 %>
-          </div>
-          <div class='field-input'>
-            <%= f.text_area :content %>
-          </div>
-        </div>
 
-        <div class='actions'>
-          <%= f.submit "投稿", class: 'user-create' %>
-        </div>
-
-      <% end %>
-    </div>
   </div>
+  <%= render "shared/footer" %>

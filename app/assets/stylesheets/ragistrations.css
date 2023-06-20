@@ -8,11 +8,17 @@
   background-position: center;
   justify-content: center;
   align-items: center;
-  height: 630px;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.signup-login-box .login-field {
+  flex-grow: 1; /* コンテンツ領域が余った場合に伸びるようにする */
 }
 
 .signup-logo {
@@ -36,16 +42,16 @@
   font-size: 28px;
   font-weight: bold;
   margin-left: 10px;
-  font-family: sans-serif;
+  font-family: Monaco;
   text-align: center;
 }
 
-h2 {
+.signup-login-box h2 {
   text-align: center;
   color: #4fbdd7;
 }
 
-.login-field {
+.registration-login-field {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   padding: 20px;
@@ -54,32 +60,39 @@ h2 {
   align-items: center;
 }
 
-.field {
+.registration-field label{
   text-align: center;
   margin-bottom: 10px;
   color: #4fbdd7;
   font-weight: bold;
 }
 
-.form-text-wrap{
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.form-text-wrap label{
-  color: #4fbdd7;
-  font-weight: bold;
-}
-
-.actions {
+.signup-actions {
   margin-top: 20px;
   text-align: center;
+  font-size: 20px;
 }
 
-.actions input[type="submit"] {
+.signup-actions input[type="submit"] {
   color: #ffffff;
   background-color: #4fbdd7;
   border: none;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 70px;
+  height: 40px;
+}
+
+.login-button{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000; 
+}
+
+#login-button {
+  color: black;
+  font-size: 20px;
+  margin-top: 16px;
 }

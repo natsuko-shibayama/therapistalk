@@ -1,22 +1,46 @@
 <%= render "shared/header" %>
-<%# みんなの投稿一覧　タイトルのみ%>
-<div class='main'>
-  <div class='talks-contents'>
-    <h2 class='main-title'>投稿一覧</h2>
-    <ul class='talks-lists'>
-      <% @talks.each do |talk| %>
-        <li class='list'>
-          <%= link_to talk_path(talk) do%>
-          <div class='talks-info'>
-            <h3 class='talks-title'>
-              <%= talk.title %>
-            <h3>
-          </div>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-    <%# 投稿一覧 %>
+<div class="toppage-wrapper">
+  
+  <%# このアプリの概要説明 %>
+  <div class="app-explanation">
+    <div class="explanation-left">
+      <h1 class="explanation-title">
+        製作者の願い
+      </h1>
+      <h2>リハビリ受けてきたけど、自分の家でどうしていいかわからない。<br>
+          マッサージ受けてきてその時はよかったけど、しばらくすると戻っちゃう。<br><br>
+          そんな方、いませんか？<br><br>
+          ここはそんなみなさんのお悩みに、<br>資格を持ったセラピストが優しく答えてくれる場所。<br><br>
+          みなさんの生活が少しでも豊かになりますように。
+      </h2>
+    </div>
+    
+    <div class="explanation-right">
+      <%= image_tag "topimage.jpg", class:"top-image" %>
+    </div>
+  </div>
+  
+  <%# みんなの投稿一覧　タイトルのみ%>
+  <div class='main'>
+    <div class='talks-contents'>
+      <h2 class='main-title'>投稿一覧</h2>
+      <ul class='talks-lists'>
+        <% @talks.each do |talk| %>
+          <li class='list'>
+            <div class='talks-info'>
+            <%= link_to talk_path(talk) do%>
+              <h3 class='talks-title'>
+                <%= talk.title %>
+              <h3>
+            <% end %>
+            <div class="talk-created-at">
+              <%= l talk.created_at %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+      <%# 投稿一覧 %>
+    </div>
   </div>
 </div>
 <%= render "shared/footer" %>

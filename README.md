@@ -10,10 +10,10 @@ https://therapistalk.onrender.com
 
 # テスト用アカウント
 
-* Basic認証パスワード:
-* Basic認証ID:
-* メールアドレス:
-* パスワード:
+* Basic認証パスワード:2222
+* Basic認証ID:admin
+* メールアドレス:aaa@aaa.com
+* パスワード:111aaa
 
 # 利用方法
 ## 相談投稿
@@ -28,7 +28,7 @@ https://therapistalk.onrender.com
 2. 投稿詳細画面下部のコメントフォームからコメント投稿可能。
 3. コメント投稿しボタンをおしたら同じ画面に戻り、最下部のコメント一覧がupdateされる。
 
-# アプリケーションを作成した背景
+# アプリケーションを作成した背景(工夫したポイントとまとめてもよい)
 前職の理学療法士時代に、在宅復帰後のセルフケアに悩む方からの意見をもらったことがあった。もちろん様々なサービスは普及しているがオフラインのものばかり。オンラインでいつでも悩みを投稿し、セラピストが回答できる媒体があればと思い、その先駆けで簡易的な機能から作成することとした。
 
 # 洗い出した条件
@@ -37,17 +37,19 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 
 # 実装した機能についての画像やGIFおよびその説明
 
-
+挙動をGyazo動画でとって、githubに貼ってから添付
 
 # 実装予定の機能
 * コメントをしたセラピストへのいいね、フォロー機能
+* 相談者とセラピストのユーザー登録を分ける（セレクトボタンでid付与）
 
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/cdc70417e9995cdc42de0a90602849de.png)](https://gyazo.com/cdc70417e9995cdc42de0a90602849de)
+![therapistalk](https://github.com/natsuko-shibayama/therapistalk/assets/124324097/a7475861-1ea7-4b3d-ad72-aaa661de75a6)
 
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/11682ad7cb28e30050206b6ee6f18120.png)](https://gyazo.com/11682ad7cb28e30050206b6ee6f18120)
+
+![スクリーンショット 2023-06-20 16 48 26](https://github.com/natsuko-shibayama/therapistalk/assets/124324097/5205826f-7cba-4cff-9236-3db34a76c131)
 
 
 # 開発環境
@@ -60,13 +62,13 @@ https://docs.google.com/spreadsheets/d/1cBq4ZxmozUnHV9XrrtMi1BdTtqRNw3uMDqPh_AbQ
 
 # ローカルでの動作方法
 
-以下のコマンドを順に実行。
+ここは書かなくてよい。
 
 
 
 # 工夫したポイント
 
-
+ここは大切！！
 
 
 # テーブル設計

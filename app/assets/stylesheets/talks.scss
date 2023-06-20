@@ -10,7 +10,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-left: 10px;
-  font-family: sans-serif;
+  font-family: Monaco;
 }
 
 .logo-icon {
@@ -90,35 +90,80 @@
 
 
 // talks.index
-.main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.toppage-wrapper{
   height: 100vh;
-  background-image: url("topimage.jpg");
-  background-size: cover;
-  background-position: center;
+}
+
+.explanation-left, .explanation-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.app-explanation{
+  height: 400px;
+  display: flex;
+  margin-left: 250px;
+  margin-top: 60px;
+  
+}
+
+.explanation-left{
+  width: 700px;
+  height: 400px;
+  background-color: beige;
+}
+
+.explanation-title{
+  color: #4fbdd7;
+  font-size: 28px;
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.explanation-left h2{
+  font-size: 20px;
+  color: #333333;
+}
+
+.explanation-right{
+  width: 550px;
+  height: 450px;
+}  
+
+.top-image{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 15px auto;
+}
+
+.main{
+  background-color: #fff;
+  margin-top: 100px;
 }
 
 .talks-contents{
   margin: 40px;
-  height: 100vh;
-  text-align: center;
+  height: 50vh;
 }
 
 .main-title{
   font-size: 28px;
   margin-bottom: 40px;
-  color: black;
+  color: #333333;
   font-weight: bold;
 }
 
+.talks-main{
+  padding: 100px;
+}
 .talks-lists{
   background-color: beige;
-  width: 70vw;
+  width: 50vw;
   padding: 10px;
+  margin: 0 auto;
 }
-
 .list{
   list-style: none;
 }
@@ -130,3 +175,118 @@
 
 
 
+
+
+// // talks.show
+
+
+.talks-show-wrapper{
+  height: 100vh;
+  margin-top: 20px;
+}
+
+/* 編集ボタンと削除ボタンをボタンにして横並びにする */
+.talk-button {
+  display: flex;
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 20px;
+  border: 1px solid #4fbdd7;
+  background-color: #4fbdd7;
+}
+
+.btn{
+  color: white;
+  text-decoration: none;
+}
+
+.talk-button{
+  margin-bottom: 80px;
+}
+.comment-form{
+  margin-bottom: 30px;
+}
+/* コメント一覧全体を背景ベージュの四角で囲む */
+.comment-lists-wrapper {
+  background-color: beige;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 50vw; /* 必要に応じて幅を調整してください */
+}
+
+
+/* コメント一覧から下をページの真ん中に寄せる */
+.comment-wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-left,.comment-right{
+  width: 30%;
+}
+
+/* コメント一覧から下のユーザーの名前以外の文字の色を黒にし、リストスタイルをなくす */
+.comments_lists {
+  color: black;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* コメントのリストが縦に並ぶ際に上下の余白を設定する */
+.comments_list {
+  margin-bottom: 16px;
+}
+
+.field{
+  font-size: 26px;
+}
+
+.caution{
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.comment-image{
+  width: 80%;
+}
+
+
+// talks.new
+
+.talks-new-wrapper{
+  padding: 60px 0;
+}
+
+.talks-new-content{
+  display: flex;
+  justify-content: center;
+}
+
+.talks-form-wrapper,.talks-new-caution{
+  width: 30%;
+}
+
+.caution-image{
+  width: 80%;
+}
+
+.talks-title {
+  margin-right: 12px;
+}
+
+.talk-created-at ,.comment-created-at{
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.talks-info {
+  display: flex;
+}
