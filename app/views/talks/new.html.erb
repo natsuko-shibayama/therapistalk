@@ -9,21 +9,21 @@
       <div class='talks-form-wrapper'>
         <%= form_with model: @talk, url: talks_path, local: true do |f|%>
           <%= render 'shared/error_messages', model: @talk %>
-          <div class='field'>
-            <div class='field-label'>
+          <div class='talks-new-field'>
+            <div class='talks-new-field-label'>
               <%= f.label :タイトル %>
             </div>
-            <div class='field-input'>
-              <%= f.text_field :title, autofocus: true %>
+            <div class='talks-new-field-input'>
+              <%= f.text_field :title, class: 'talks-title-area', autofocus: true %>
             </div>
           </div>
 
-          <div class='field'>
-            <div class='field-label'>
+          <div class='talks-new-field'>
+            <div class='talks-new-field-label'>
               <%= f.label :相談内容 %>
             </div>
-            <div class='field-input'>
-              <%= f.text_area :content %>
+            <div class='talks-new-field-input'>
+              <%= f.text_area :content, class: 'talks-text-area' %>
             </div>
           </div>
 
@@ -35,8 +35,13 @@
       </div>
 
       <div class="talks-new-caution">
-        <div class="caution-text">どんなお悩みでも大丈夫です。<br>体の部位や運動の方向など書くとわかりやすいですよ！</div>
-        <%= image_tag "topimage.jpg", class:"caution-image" %>
+        <div class="caution-text">どんなお悩みでも大丈夫です!
+        <br><br>（参考例）<br>タイトル:歩行中に左足に痛みがあります
+        <br>相談内容:2年前に左大腿骨頸部骨折し、人工骨頭置換術を受けました。
+        <br>屋内は杖なし、屋外は杖を使って歩いています。
+        <br>現在外来リハビリにも週1回通っていますが、
+        <br>1km以上歩くと左足の付け根が痛くなります。</div>
+        <%= image_tag "pain.jpg", class:"caution-image" %>
       </div>
     </div>
 

@@ -110,7 +110,7 @@
 .explanation-left{
   width: 700px;
   height: 400px;
-  background-color: beige;
+  background:rgba(245, 245,220, 0.5);
 }
 
 .explanation-title{
@@ -159,7 +159,7 @@
   padding: 100px;
 }
 .talks-lists{
-  background-color: beige;
+  background:rgba(245, 245,220, 0.5);
   width: 50vw;
   padding: 10px;
   margin: 0 auto;
@@ -185,6 +185,22 @@
   margin-top: 20px;
 }
 
+.talks-show-field{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.talks-show-field-label{
+  font-size: 26px;
+  color: #4fbdd7;
+  font-weight: bold;
+}
+
+
+.talks-show-field-input{
+  font-size: 20px;
+  color: black;
+}
 /* 編集ボタンと削除ボタンをボタンにして横並びにする */
 .talk-button {
   display: flex;
@@ -200,6 +216,7 @@
   padding: 10px 20px;
   border: 1px solid #4fbdd7;
   background-color: #4fbdd7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
 }
 
 .btn{
@@ -210,12 +227,14 @@
 .talk-button{
   margin-bottom: 80px;
 }
+
 .comment-form{
   margin-bottom: 30px;
 }
+
 /* コメント一覧全体を背景ベージュの四角で囲む */
 .comment-lists-wrapper {
-  background-color: beige;
+  background:rgba(245, 245,220, 0.5);
   padding: 10px;
   margin: 0 auto;
   max-width: 50vw; /* 必要に応じて幅を調整してください */
@@ -234,24 +253,29 @@
 }
 
 /* コメント一覧から下のユーザーの名前以外の文字の色を黒にし、リストスタイルをなくす */
-.comments_lists {
+.comments-lists {
   color: black;
   list-style-type: none;
   padding-left: 0;
 }
 
 /* コメントのリストが縦に並ぶ際に上下の余白を設定する */
-.comments_list {
+.comments-list {
   margin-bottom: 16px;
 }
 
-.field{
+.comment-field{
   font-size: 26px;
+  color: #4fbdd7;
+  font-weight: bold;
 }
+
 
 .caution{
   margin-bottom: 40px;
-  font-size: 20px;
+  font-size: 18px;
+  background:rgba(245, 245,220, 0.5);
+  padding: 10px 10px;
 }
 
 .comment-image{
@@ -260,14 +284,39 @@
 
 
 // talks.new
+.talks-new-content{
+  display: flex;
+  justify-content: center;
+}
 
 .talks-new-wrapper{
   padding: 60px 0;
 }
 
-.talks-new-content{
-  display: flex;
-  justify-content: center;
+.talks-new-field{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.talks-new-field-label{
+  font-size: 26px;
+  color: #4fbdd7;
+  font-weight: bold;
+}
+
+.talks-new-field-input{
+  font-size: 20px;
+  color: black;
+}
+
+.talks-title-area{
+  width: 300px;
+  height: 50px;
+}
+
+.talks-text-area{
+  width: 450px;
+  height: 160px;
 }
 
 .talks-form-wrapper,.talks-new-caution{
@@ -275,7 +324,7 @@
 }
 
 .caution-image{
-  width: 80%;
+  width: 100%;
 }
 
 .talks-title {
@@ -287,6 +336,44 @@
   margin-top: 10px;
 }
 
-.talks-info {
-  display: flex;
+.caution-text{
+  padding-bottom: 30px;
+}
+
+//talks.edit
+.talks-edit{
+  height: 70vh;
+  background-image: url("edit.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  display: table;
+  width: 100%;
+  
+}
+  
+.talks-edit-wrapper{
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.talks-edit-field{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.talks-edit-field-label{
+  font-size: 26px;
+  color: #4fbdd7;
+  font-weight: bold;
+}
+
+.talks-edit-field-input{
+  font-size: 20px;
+  color: black;
+}
+
+.talks-edit-input{
+  width: 500px;
+  height: 100px;
 }

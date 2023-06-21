@@ -1,7 +1,4 @@
 // users.show
-// .mypage-wrapper{
-//   height: 100vh;
-// }
 
 .mypage-left, .mypage-right {
   display: inline-block;
@@ -18,7 +15,7 @@
 .mypage-left{
   width: 700px;
   height: 400px;
-  background-color: beige;
+  background:rgba(245, 245,220, 0.5);
   text-align: center;
   padding-top: 60px;
 }
@@ -69,4 +66,36 @@
 .login-flash-message{
   color: #333333;
   font-size: 14px;
+}
+
+//users.edit
+.users-edit{
+  height: 70vh;
+  background-image: url("edit.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  display: table;
+  width: 100%;
+}
+
+.users-edit-field{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.users-edit-field-label{
+  font-size: 26px;
+  color: #4fbdd7;
+  font-weight: bold;
+}
+
+.users-edit-field-input{
+  font-size: 20px;
+  color: black;
+}
+
+.user-edit-input{
+  width: 500px;
+  height: 100px;
 }

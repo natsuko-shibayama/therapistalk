@@ -2,31 +2,31 @@
 <div class="talks-show-wrapper">
 <%# 投稿詳細（タイトル、内容）とその下に編集ボタン、削除ボタンをつける %>
 <%# タイトル %>
-  <div class='field'>
-    <div class='field-label'>
+  <div class='talks-show-field'>
+    <div class='talks-show-field-label'>
       <%= label_tag :タイトル %>
     </div>
-    <div class='field-input'>
+    <div class='talks-show-field-input'>
       <%= @talk.title %>
     </div>
   </div>
 
 <%# 名前 %>
-  <div class='field'>
-    <div class='field-label'>
+  <div class='talks-show-field'>
+    <div class='talks-show-field-label'>
       <%= label_tag :相談者 %>
     </div>
-    <div class='field-input'>
+    <div class='talks-show-field-input'>
       <%= @user.nickname %>
     </div>
   </div>
 
 <%# 相談内容 %>
-  <div class='field'>
-    <div class='field-label'>
+  <div class='talks-show-field'>
+    <div class='talks-show-field-label'>
       <%= label_tag :投稿内容 %>
     </div>
-    <div class='field-input'>
+    <div class='talks-show-field-input'>
       <%= @talk.content %>
     </div>
   </div>
@@ -54,21 +54,21 @@
         <% if user_signed_in? %>
           <%= form_with model: @comment, url: talk_comments_path(@talk.id) ,method: :post, local: true do |f|%>
             <%= render 'shared/error_messages', model: @comment %>
-            <div class="field">
+            <div class="comment-field">
               <%= f.label :コメント %><br />
-              <%= f.text_area :comment, id:"comment_text" %>
+              <%= f.text_area :comment, class:"comment-text" %>
             </div>
             <div class="actions">
-              <%= f.submit "送信", class: :form__btn  %>
+              <%= f.submit "送信", class: 'commnet-form-btn'  %>
             </div>
           <% end %> 
         <% end %>
       </div>
       <div class="comment-lists-wrapper">
-        <ul class="comments_lists">
+        <ul class="comments-lists">
         <h3>コメント一覧</h3>
           <% @comments.each do |comment| %>
-            <li class="comments_list">
+            <li class="comments-list">
               <%= comment.comment %>
               <%= link_to comment.user.nickname, user_path(comment.user_id), class: :comment_user %>
               <span class="comment-created-at">
@@ -82,8 +82,8 @@
 
     <div class="comment-right">
       <div class="caution">
-        ※お悩みに沿ったわかりやすいコメントをお願いします！<br>
-        みんなに優しい言葉づかいを心がけましょう。
+        ※お悩みに沿った<br>わかりやすいコメントをお願いします！<br>
+        みんなに優しい<br>言葉づかいを心がけましょう。
       </div>
       <%= image_tag "stretch.jpg", class:"comment-image" %>
     </div>
