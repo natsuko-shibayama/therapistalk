@@ -16,12 +16,12 @@
         
         <div class="field">
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"session-input" %>
         </div>
 
         <div class="field">
           <%= f.label :パスワード %><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
+          <%= f.password_field :password, autocomplete: "current-password" ,class:"session-input"%>
         </div>
 
         <% if devise_mapping.rememberable? %>

@@ -60,11 +60,19 @@
   align-items: center;
 }
 
-.registration-field label{
+.registration-field {
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.registration-field label, .registration-field span{
   margin-bottom: 10px;
   color: #4fbdd7;
   font-weight: bold;
+}
+
+.registration-input {
+  margin-top: 4px;
 }
 
 .signup-actions {

@@ -50,8 +50,8 @@
   <%# ここからコメント欄 %>
   <div class="comment-wrapper">
     <div class="comment-left">
-      <div class="comment-form">
-        <% if user_signed_in? %>
+      <% if user_signed_in? %>
+        <div class="comment-form">
           <%= form_with model: @comment, url: talk_comments_path(@talk.id) ,method: :post, local: true do |f|%>
             <%= render 'shared/error_messages', model: @comment %>
             <div class="comment-field">
@@ -62,8 +62,8 @@
               <%= f.submit "送信", class: 'commnet-form-btn'  %>
             </div>
           <% end %> 
-        <% end %>
-      </div>
+        </div>
+      <% end %>
       <div class="comment-lists-wrapper">
         <ul class="comments-lists">
         <h3>コメント一覧</h3>

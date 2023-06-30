@@ -96,3 +96,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
+
+.session-input {
+  margin-top: 4px;
+}
