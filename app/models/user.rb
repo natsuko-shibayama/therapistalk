@@ -11,5 +11,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'は半角英数字混合で入力してください' }
   validates :job, presence: true
   validates :description, presence: true
+  validates :role, presence: true, numericality: { other_than: 0 , message: "can't be blank"}
+
+
 end
 
