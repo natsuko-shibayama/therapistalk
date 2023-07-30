@@ -12,36 +12,41 @@
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class='registration-field'>
+          <%= f.label :相談者orセラピスト %><br />
+          <%= f.collection_select(:role, Role.all, :id, :name) %>
+        </div>
+      
+        <div class='registration-field'>
           <%= f.label :ニックネーム %><br />
-          <%= f.text_field :nickname, autofocus: true, class:"nickname", id:"nickname" %>
+          <%= f.text_field :nickname, autofocus: true, class:"nickname registration-input", id:"nickname" %>
         </div>
 
         <div class="registration-field">
           <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autocomplete: "email" %>
+          <%= f.email_field :email, autocomplete: "email", class:"registration-input" %>
         </div>
 
         <div class="registration-field">
           <%= f.label :パスワード %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上)</em>
+          <span>(<%= @minimum_password_length %> 文字以上)</span>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
+          <%= f.password_field :password, autocomplete: "new-password", class:"registration-input" %>
         </div>
 
         <div class="registration-field">
           <%= f.label :パスワード（確認） %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"registration-input" %>
         </div>
 
         <div class='registration-field'>
           <%= f.label :職業 %><br />
-          <%= f.text_field :job, class:"job", id:"job" %>
+          <%= f.text_field :job, class:"job registration-input", id:"job" %>
         </div>
 
         <div class='registration-field'>
           <%= f.label :自己紹介 %><br />
-          <%= f.text_area :description, class:"description", id:"description" %>
+          <%= f.text_area :description, class:"description registration-input", id:"description" %>
         </div>
 
         <div class="signup-actions">

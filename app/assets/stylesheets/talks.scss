@@ -100,7 +100,7 @@
 }
 
 .app-explanation{
-  height: 400px;
+  // height: 400px;
   display: flex;
   margin-left: 250px;
   margin-top: 60px;
@@ -109,7 +109,7 @@
 
 .explanation-left{
   width: 700px;
-  height: 400px;
+  // height: 400px;
   background:rgba(245, 245,220, 0.5);
 }
 
@@ -200,6 +200,8 @@
 .talks-show-field-input{
   font-size: 20px;
   color: black;
+  width: 50%;
+  margin: 0 auto;
 }
 /* 編集ボタンと削除ボタンをボタンにして横並びにする */
 .talk-button {
