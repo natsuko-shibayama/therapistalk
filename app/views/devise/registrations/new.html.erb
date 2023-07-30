@@ -12,6 +12,11 @@
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class='registration-field'>
+          <%= f.label :相談者orセラピスト %><br />
+          <%= f.collection_select(:role, Role.all, :id, :name) %>
+        </div>
+      
+        <div class='registration-field'>
           <%= f.label :ニックネーム %><br />
           <%= f.text_field :nickname, autofocus: true, class:"nickname registration-input", id:"nickname" %>
         </div>
